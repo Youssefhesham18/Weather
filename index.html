@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/logo.png" class="me-2" alt="" />
+          <div class="logo-content">
+            <h1 class="title">Weather</h1>
+            <p>tagline goes here</p>
+        </div>
+        </a>
+        <button class="navbar-toggler mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item px-2">
+              <a class="nav-link active" onclick="showWeather()" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">News</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" href="#">Photos</a>
+            </li>
+            <li class="nav-item px-2">
+              <a class="nav-link" onclick="showContact()" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="site-bg">
+      <div class="container">
+        <div id="searchvalue" class="search-location position-relative">
+          <input
+            type="text"
+            class="searchInput"
+            placeholder="Find your location.."
+          />
+          <input type="button" id="submit" value="Find" />
+        </div>
+      </div>
+    </div>
+
+
+
+    
+    <div class="forecast-table">
+      <div class="container">
+        <div class="forecast">
+          <div class="col-md-4 current">
+            <div class="forecast-head">
+              <div class="today day float-start"></div>
+              <div class="date float-end"></div>
+              <div class="clearfix"></div>
+            </div>
+            <div class="forecast-content">
+              <div class="location"></div>
+              <div
+                class="degree d-flex align-items-center justify-content-around"
+              >
+                <div class="degree-num"></div>
+                <div class="degree-icon">
+                  <img class="img-fluid" src="" alt="" />
+                </div>
+              </div>
+              <div class="custom"></div>
+              <span class="cloud">
+                <img src="images/icon-umberella.png" alt="" />20%
+              </span>
+              <span class="wind">
+                <img src="images/icon-wind.png" alt=""/>
+                <span></span>
+              </span>
+              <span> <img src="images/icon-compass.png" alt="" />East </span>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="forecast-head">
+              <div id="day2" class="day"></div>
+            </div>
+            <div class="forecast-content text-center">
+              <div class="tmw degree-icon mb-5">
+                <img src="" alt="" width="50" />
+              </div>
+              <div
+                id="tmw-degree"
+                class="degree text-white fw-bold mb-2"
+                style="font-size: 1.7142857143em"
+              ></div>
+              <small class="lowday2"> </small>
+              <div id="day2" class="custom"></div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="forecast-head">
+              <div id="day3" class="day"></div>
+            </div>
+            <div class="forecast-content text-center">
+              <div class="after degree-icon mb-5">
+                <img src="" alt="" width="50" />
+              </div>
+              <div
+                id="after-degree"
+                class="degree text-white fw-bold mb-2"
+                style="font-size: 1.7142857143em"
+              ></div>
+              <small class="lowDay3"> </small>
+              <div id="day3" class="custom"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <footer class="site-footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<form action="#" class="subscribe-form">
+								<input type="text" placeholder="Enter your email to subscribe...">
+								<input type="submit" value="Subscribe">
+							</form>
+						</div>
+						<div class="col-md-3 col-md-offset-1">
+							<div class="social" style="margin: 12px 50px;">
+								<a href="#"><i class=" fa-brands fa-facebook"></i></a>
+								<a href="#"><i class="fa-brands fa-twitter"></i></a>
+								<a href="#"><i class="fa-brands fa-google-plus"></i></a>
+								<a href="#"><i class="fa-brands fa-pinterest"></i></a>
+							</div>
+						</div>
+					</div>
+
+					<p class="colophon">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+				</div>
+			</footer>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
